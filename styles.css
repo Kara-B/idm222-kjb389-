@@ -1,0 +1,84 @@
+
+@font-face {
+    font-family: 'glacialindifferenceregular';
+    src: url('./Fonts/glacialindifference-regular-webfont.woff2') format('woff2'),
+         url('./Fonts/glacialindifference-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'GlacialIndifference-Bold';
+    src: url('./Fonts/GlacialIndifference-Bold.woff2') format('woff2'),
+         url('./Fonts/GlacialIndifference-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  /* General Setup */
+* {
+    box-sizing: border-box;
+    border: none;
+    margin: 0;
+    padding: 0;
+    font-family: 'glacialindifferenceregular';
+}
+body {
+    background-color: rgb(14, 16, 44);
+}
+main {
+    color: #e3e3e3;
+    margin: 1rem;
+}
+
+/* Header Styles start here */
+
+.header{
+    background-color: #e3e3e3;
+    padding: 20px 50px;
+}
+
+.nav_header{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav_header_ul{
+    display: flex;
+    padding: 5px 25px;
+}
+.nav_header_ul-li {
+    list-style-type: none;
+    padding: 5px 25px;
+}
+a {
+    color:black;
+    text-decoration: none;
+    
+}
+.header__logo {
+display: flex;
+justify-content: flex-start;
+width: 60px;
+}
+
+/* Home Page styles for text */
+
+.Openingtext_huge-text{
+    font-size: 4em;
+    margin: 10px;
+    text-align: center;
+}
+.Openingtext_smaller-text{
+    margin: 10px;
+    text-align: center;
+}
+
+@media only screen and (min-width: 800px) {
+    .Openingtext_huge-text{
+        text-align: left;
+    }
+    .Openingtext_maller-text{
+        text-align: left;
+    }
+  }
