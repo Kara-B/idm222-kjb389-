@@ -5,33 +5,124 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
+    <title>Kara Butler Portfolio: Home</title>
 </head>
 <body>
-    <nav class="header">
-               <img class="header__logo" src="./Images/kblogo.svg" alt="carbone logo" />
-        <div class="nav_header">
-                <ul class="nav_header_ul">
-                    <li class="nav_header_ul-li"> <a href="about.html">About Me</a></li>
-                    <li class="nav_header_ul-li"> <a href="mywork.html">My Work</a></li>
-                    <li class="nav_header_ul-li"><a href="resume.html">Resume</a></li>
-                </ul>
-        </div>   
-    </nav>
+      <!-- Navigation Bar -->
+      <nav class="header">
+        <a href="index.html"> <img class="header__logo" src="./Images/kblogo.svg" alt="KB logo" /> </a>
+         <ul class="nav_header_ul">
+             <li class="nav_header_ul-li"> <a href="mywork.html">My Work</a></li>
+             <li class="nav_header_ul-li"><a href="resume.html">Resume</a></li>
+         </ul>  
+         <!-- Screensize of blank or more will show this image under the header -->
+         <!-- <source media="(min-width: 550px)"  src="./Images/Stickers/headersticker-06.svg" alt="header" >  -->
+        </nav>
 </body>
 
+
 <main>
-    <!-- opening text -->
-    <div class="Openingtext">
-    <h1 class="Openingtext_huge-text"> Hello!</h1>
-    <h1 class="Openingtext_huge-text">My name is Kara Butler</h1>
-    <h1 class="Openingtext_smaller-text"> and I'm a UX Designer</h1>
-    <!-- opening text end -->
+ <!-- opening text -->
+ <div class="Intro">
+    <h1 class="Intro_large"> Hello!</h1>
+    <h1 class="Intro_large">My name is Kara Butler</h1>
+    <div class="hero__underline"></div>
+    <h1 class="Intro_small"> UX/UI Designer</h1> 
+    <sticker> 
+        <img class="exploresticker" src="./Images/Stickers/exploresticker.svg" alt="Explore Below">
+    </sticker>
+ </div>
+
+   
+
+    <div class="About-Me_div">
+        <div class="About-Me">
+         <h2>About Me </h2>
+         <p>
+              My name is Kara and I'm currently pursuing my BS in
+             User Experience and Interaction Design at Drexel University
+         </p>
+
+            <button class="js-read-more">
+             Read More
+             </button>
+        </div>
+        <div class="About-Me-More js-about-me-more" style="display: none;">
+            <li> I grew up in Maryland and am pursuing my Degree in Philly </li>
+            <li> I've got a passion for design that's not only functional, but serves another means</li>
+            <li> I'm apt with creative cloud software and am studying to be proficient in website and app design</li>
+        </div>
+    
+    </div> 
+    <div class="mission-statement">
+
+        <div class="vertical-line"></div>
+    <p>
+        As a designer for online content, it is not only my job, but my passion to explore the breadth of
+        techniques available and use them to the best of my ability to make creative visions a reality.
+    </p>
     </div>
-    <p> I am Currently pursuing my BS in User Experience and Interaction Design at Drexel University </p>
+
+    <div class="Project-Header">        
+        <img class="sideflourish" src="./Images/Stickers/sideflourish.svg" alt="flourish">
+        <h2>Projects</h2>
+        <!-- <img class="projectsticker" src="./Images/Stickers/projectdot.svg" alt="project line"> -->
+    </div>
+    <div class="project-div">
+
+   <a href="musicandarts.html"> <div class="project-div_div project1">
+        <h2>Music &amp; Arts.com</h2>
+        <p>Desktop Redesign</p>
+        <p class="project-year">2020</p>
+    </div> 
+    </a>
+
+    <a href="polygon.html">
+    <div class="project-div_div project2">
+        <h2>Polygon.com</h2>
+        <p>Website Redesign</p>
+        <p class="project-year">2021</p>
+    </div> 
+    </a>
+
+    <a href="adventureplate.html"> 
+    <div class="project-div_div project1">
+        <h2>Opentable</h2>
+        <p>Mobile Rebrand</p>
+        <p class="project-year">2021</p>
+    </div> 
+    </a>
+
+    <a href="mobileportfolio.html"> 
+    <div class="project-div_div project2">
+        <h2>Portfolio Site v.1</h2>
+        <p>Mobile Website Build</p>
+        <p class="project-year">2021</p>
+    </div> 
+    </a>
+
+    </div>
+    <script src="main.js"></script>
 </main>
 
 <footer>
 
+<div class="footer_contact">
+    <a href="https://www.linkedin.com/in/kara-j-butler-/"> 
+        <img src="./Images/Icons/linkedinicon.png" alt="LinkedIn"> 
+    </a>
+
+    <a href="mailto:kjb389@drexel.edu">  
+        <img src="./Images/Icons/outlookicon.png" alt="Outlook Email"> 
+    </a>
+    
+    <a href="https://twitter.com/ItsKButler">
+        <img src="./Images/Icons/twittericon.webp" alt="Twitter">
+    </a>
+</div>
+    <p>
+        &copy;Kara Butler 2022
+       </p>
 </footer>
+
 </html>

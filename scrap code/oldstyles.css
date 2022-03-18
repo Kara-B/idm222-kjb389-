@@ -1,0 +1,449 @@
+
+:root {
+
+    --color-orange: #e7582c;
+}
+@font-face {
+    font-family: 'glacialindifferenceregular';
+    src: url('./Fonts/glacialindifference-regular-webfont.woff2') format('woff2'),
+         url('./Fonts/glacialindifference-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'GlacialIndifference-Bold';
+    src: url('./Fonts/GlacialIndifference-Bold.woff2') format('woff2'),
+         url('./Fonts/GlacialIndifference-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  /* General Setup */
+* {
+    box-sizing: border-box;
+    border: none;
+    margin: 0;
+    padding: 0;
+    font-family: 'glacialindifferenceregular';
+}
+body {
+    background-color: rgb(14, 16, 44);
+}
+main {
+    color: #e3e3e3;
+    font-size: 20px;
+    min-height: 90vh;
+}
+footer {background-color: #001136;
+  color: #e8f6ff;
+  margin: auto;
+  padding: 2rem;
+}
+
+/* Header Styles start here */
+
+.header{ 
+     display: flex;
+     position: sticky;
+     top: 0;
+    justify-content: space-between;
+    align-items:center;
+    background-color: #e3e3e3;
+    max-width: 100%;
+    height: rem;
+    padding: 20px;
+}
+
+.nav_header_ul{
+    display: flex;
+    padding: 5px 25px;
+}
+.nav_header_ul-li {
+    list-style-type: none;
+    padding: 5px 25px;
+}
+a {
+    font-size: 1.125rem;
+    color:black;
+    text-decoration: underline 0.15em rgba(255, 255, 255, 0);
+    transition: text-decoration-color 300ms;  
+}
+a:hover{
+    font-weight: 800;
+    text-decoration-color:  var(--color-orange);
+    transform-origin: center;
+}
+.header__logo {
+display: flex;
+justify-content: flex-start;
+width: 60px;
+}
+
+.header__logo:hover{
+    /* To get this cool specific filter for the color I wanted on my svg, i input my desired color on https://codepen.io/sosuke/pen/Pjoqqp which generates a filter based on desired color */
+    filter: invert(39%) sepia(71%) saturate(784%) hue-rotate(333deg) brightness(99%) contrast(100%) drop-shadow(0 0.2rem .15rem rgba(0, 0, 0, 0.623));
+   transform-origin: bottom;
+   transition: .2s ease-in-out;
+}
+
+/* Home Page styles for text */
+.Openingtext {
+    padding: 2rem;
+}
+
+.Openingtext_huge-text{
+    font-size: 4em;
+    margin: 10px;
+    text-align: center;
+}
+.hero__underline {
+    animation: underline 1s ease-in forwards;
+    background-color: #ffffff;
+    height: 2px;
+    transform-origin: left;
+    margin: 0 3rem ;
+    width: 80%;
+}
+.Openingtext_smaller-text{
+    margin: 20px 1rem ;
+    text-align: center;
+}
+
+  /*  */
+  .about-paragraph{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    padding: 2em, 3rem; 
+}
+  .UXIDlogo{
+      display: flex;
+      width: 12rem;
+      margin: 1em;
+  }
+
+  /* .UXIDlogo:hover{
+      transform: translateY(-10px);
+      box-shadow: rgba(255, 255, 255, 0);
+  } */
+
+  /* TBC, when tweaked should make the philly background fit neatly within its div */
+
+  .paragraph-1 {
+    display:block;
+    max-width: 100%;
+    background-color: var(--color-orange);
+    color:rgb(255, 255, 255);
+    text-decoration: dashed;
+}
+.phillybg {
+    object-fit: cover;
+    min-width: 100%;
+    filter: blur(3px);
+  }
+
+  .paragraph-2 { 
+      display: flex;
+      max-width: 100%;
+      background-color:#edeef3;
+      color:rgb(36, 36, 36);
+      padding: 2em;
+  }
+  .paragraph-3 { 
+    font-size: larger;
+    display: flex;
+    max-width: 100%;
+    background-color: #1f1f1f;
+    color:var(--color-orange);
+    padding: 3em;
+}
+
+.vertical-line{
+    border-left: 2px solid var(--color-orange);
+    height: 6rem;
+    margin: 1rem;
+}
+/* Project Styles */
+
+.Projects{
+    background-color: var(--color-orange);
+    padding: 1rem;
+}
+
+.Project-Header {
+    color:#edeef3;
+    font-family: 'GlacialIndifference-Bold';
+    font-size: 2.125rem;
+    margin: 0 2rem 1rem;
+}
+.Project-Title {
+    display: flex;
+    padding: 1em .5em;
+}
+
+.Project_div-Container{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 20px;
+}
+
+.Project_div {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+	margin: 0 auto;
+    border-radius: 55px;
+ 
+}
+
+.Project_image{
+    display:block;
+    object-fit: cover;
+    width:25%;
+}
+.text {
+    display: none;
+}
+
+.Proj1{
+    background-color: #7c1818;
+}
+.Proj2{
+    background-color: #843686;
+}
+.Proj3{
+    background-color: #77b7c7;
+}
+.Proj4{
+    background-color: #3158c2;
+}
+.Proj5{
+    background-color: #cfbf88;
+}
+.Proj6{
+    color: rgb(26, 26, 26);
+    background-color: #daa77d;
+}
+
+
+
+  /* Animations Defined */
+  @keyframes wiggle {
+    0% { transform: rotate(0deg); }
+    20%{ transform: rotate(-30deg); }
+    40%{ transform: rotate(20deg); }
+    60%{transform: rotate(-10deg);}
+    100%{ transform: rotate(0deg); }
+}
+@keyframes underline{
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
+
+}
+
+
+/* Styles for Resume */
+h3 {
+    font-size: 1em;
+    padding: 1em 0 0 1em ;
+}
+.hero{
+    background-color: #1f1f1f;
+    max-width: 100%;
+    /* height: 40vw; */
+}
+.ResumeBanner{
+    filter: invert();
+}
+
+.resume-div{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50%;
+    max-width: 100%;
+    line-height: 1.5;
+    background-color: #dab893;
+    color: #1f1f1f;
+    justify-content: end;
+    margin: 2rem 0;
+    padding: 1rem;
+}
+.resume-div p{
+    display: grid;
+    grid-column-start: 2;
+  
+}
+.resume-subhead {
+    background-color: var(--color-orange);
+}
+.education img {
+    display: grid;
+    grid-row: 1 3;
+    max-width: 50%;
+    margin: 1rem;
+
+}
+.project_wrapper{
+display: block;
+margin-bottom: 1.0625rem;
+position: relative;
+}
+/* 
+
+
+.resume_div_header{
+    padding: 1em;
+    background-color: var(--color-orange);
+}
+.resume-text{
+    padding: 20px 0 0 1rem;
+} */
+/* Resume Divs 
+.education, .projects, .honors, .activities{
+    color:black;
+    background-color: #a7a8b6;
+}
+.skills, .coursework {
+    background-color: #7981ac;
+} */
+
+
+
+/* reference for grid setup: https://css-tricks.com/a-grid-of-logos-in-squares/ */
+.skills-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(6rem, auto));
+	grid-gap: 1rem;
+  }
+div.skills-grid {
+	display: grid;
+    padding-bottom: 100%;
+  }
+
+  .skills-grid  div  img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+
+/* Specified for Desktop Use */
+
+@media only screen and (min-width: 700px) {
+    .Openingtext_huge-text{
+        animation: name duration timing-function delay iteration-count direction fill-mode;
+        padding-left: 1rem;
+        text-align: left;
+    }
+    .Openingtext_smaller-text{
+        padding: 1rem;
+        text-align: left;
+    }
+    .hero__underline {
+        animation: underlineLeft 1s ease-in forwards;
+        background-color: #ffffff;
+        height: 2px;
+        transform-origin: left;
+        margin: 0 1.5rem ;
+        width: 75%;
+    }
+    /* Project Adjustments */
+    .Project_div_image {
+       height: 50px;
+        object-fit: cover;
+  }
+  .Project-Header {
+    font-size: 3.125rem;
+}
+
+.Project_div-Container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+    margin: 0 auto;
+    max-width: 64em;
+    padding: 0;
+    justify-content: center;
+}
+
+.Project_div {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+	max-width: 15.875em;
+	margin: 0 auto;
+    padding: 8px 1em;
+    position: relative;
+    border-radius: 55px;
+}
+
+.Project_image{
+    display:block;
+    object-fit: cover;
+    width:45%;
+}
+
+.overlay {
+    position: absolute;
+    border-radius: 55px;
+    bottom: 0;
+    left: 100%;
+    right: 0;
+    overflow: hidden;
+    width: 0;
+    height: 100%;
+    transition: .5s ease;
+  }
+  
+  .Project_div:hover .overlay {
+    width: 100%;
+    left: 0;
+  }
+  
+  .text {
+    display: inline-block;
+    text-align: center;
+    font-size: 1.25rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+  }
+  .Proj1-overlay{
+    background-color: #d34545;
+}
+.Proj2-overlay{
+    background-color: #a16ba1;
+}
+.Proj3-overlay{
+    background-color: #96c1cc;
+}
+.Proj4-overlay{
+    background-color:#5879d3;
+}
+.Proj5-overlay{
+    color: #001136;
+    background-color: #e2d8b5;
+}
+.Proj6-overlay{
+    background-color: rgb(197, 137, 88);
+}
+/* REesume styles */
+.ResumeBanner{
+    max-width: 35%;
+}
+.hero{
+    display: flexbox;
+    background-color: #1f1f1f;
+    justify-content: center;
+    max-height: 200px ;
+}
+.skills-grid {
+    display: grid;
+    grid-auto-columns: 33%;
+}
+
+}

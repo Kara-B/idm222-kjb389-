@@ -1,4 +1,9 @@
 
+/* Document General setup */
+:root {
+    --color-bright: #ff6f31;
+    --color-dark: #383838;
+}
 @font-face {
     font-family: 'glacialindifferenceregular';
     src: url('./Fonts/glacialindifference-regular-webfont.woff2') format('woff2'),
@@ -15,70 +20,515 @@
     font-style: normal;
   }
 
-  /* General Setup */
-* {
+  /* Default settings */
+  * {
     box-sizing: border-box;
     border: none;
     margin: 0;
     padding: 0;
     font-family: 'glacialindifferenceregular';
 }
-body {
-    background-color: rgb(14, 16, 44);
-}
-main {
-    color: #e3e3e3;
-    margin: 1rem;
+
+a {
+    text-decoration: none;
 }
 
-/* Header Styles start here */
-
-.header{
-    background-color: #e3e3e3;
-    padding: 20px 50px;
+p {
+    font-size: 1.2rem;
 }
-
-.nav_header{
+/* Header Styles */
+.header{ 
     display: flex;
-    justify-content: flex-end;
+    position: sticky;
+    top: 0;
+   align-items:center;
+   justify-content: space-between;
+   background-color: #111111;
+   padding: 20px;
+   max-width: 100%;
+   z-index: 1000;
+}
+
+.header__logo {
+    display: flex;
+    justify-self: flex-start;
+    width: 60px;
+    filter: invert();
 }
 
 .nav_header_ul{
+    display: normal;
+}
+.nav_header_ul a {
     display: flex;
-    padding: 5px 25px;
-}
-.nav_header_ul-li {
+    color: #ffff;
+    font-size: 1.2em;
     list-style-type: none;
-    padding: 5px 25px;
+    padding: 1rem 25px;
+    text-decoration: underline 0.15em rgba(255, 255, 255, 0);
+    transition: text-decoration-color 300ms;  
 }
-a {
-    color:black;
-    text-decoration: none;
-    
+.nav_header_ul a:hover {
+    font-weight: 800;
+    text-decoration-color:  var(--color-bright);
 }
-.header__logo {
-display: flex;
-justify-content: flex-start;
-width: 60px;
+/* Intro Styles */
+.Intro {
+    padding: 2rem 2rem 0 2rem;
 }
 
-/* Home Page styles for text */
-
-.Openingtext_huge-text{
+.Intro_large{
     font-size: 4em;
     margin: 10px;
     text-align: center;
 }
-.Openingtext_smaller-text{
-    margin: 10px;
+.hero__underline {
+    animation: underline .7s ease-in-out forwards;
+    height: 2px;
+    transform-origin: left;
+    border-top: 4px dashed var(--color-bright);
+    margin: 0 3rem ;
+    max-width: 100%;
+    z-index: 2;
+}
+.Intro_small{
+    margin: 20px 1rem ;
     text-align: center;
 }
 
-@media only screen and (min-width: 800px) {
-    .Openingtext_huge-text{
-        text-align: left;
+/* Site stickers: Decorative graphics designed to stay in their spot on the page without affecting anything else they act near. 
+This is the only place I will use position to keep them in the correct positions*/
+.exploresticker {
+    position: relative;
+    left: 38%;
+    width: 30%;
+    z-index: 500;
+}
+.sideflourish{
+    position: relative;
+    display: flex;
+    width: 30%;
+    max-width: 200px;
+}
+.projectsticker{
+    display: flex;
+    width: 80%;
+}
+
+/* About paragraph Styles */
+ .About-Me_div{
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    line-height: 1.5rem;
+ }
+
+
+.about-background{ 
+    object-fit: cover;
+    object-position: center;
+    max-width: 100%;
+}
+
+.About-Me{
+    background-color: #ffffff;
+    border: 2px solid black;
+    width: 80%;
+    margin: 1.5rem 2rem;
+}
+
+.About-Me p{
+padding: .5rem;
+}
+
+.About-Me h2 {
+    background-color: var(--color-bright);
+    color: #edeef3;
+    padding: .2rem;
+}
+.About-Me button { 
+    background-color: rgb(255, 255, 255);
+    border: 2px solid black;
+    margin: .5rem;
+    padding: .5rem;
+    border-radius: 20px;
+}
+.About-Me button:hover { 
+    /* https://cssgradient.io/ For cool Css gradients */
+    background: linear-gradient(90deg, rgba(251,180,23,1) 0%, rgba(255,76,0,1) 100%);
+    transition: cubic-bezier(0.19, 1, 0.22, 1);
+    cursor: pointer;
+}
+
+
+
+
+.mission-statement { 
+    display: flex;
+    max-width: 100%;
+    background-color:rgb(36, 36, 36);
+    align-items: center;
+    color: #edeef3;
+    padding: 2em;
+}
+
+.vertical-line{
+    border-left: 2px solid var(--color-bright);
+    height: 6rem;
+    margin: 1rem;
+}
+
+
+.Project-Header{
+    display: flex;
+    align-items: center;
+    font-size: 1.6rem;
+    margin: 1rem 0;
+}
+.Project-Header h2 {
+    font-size: 2em;
+    margin-left: 1rem;
+}
+
+
+.project-div {
+    display: grid;
+    align-items: center;
+}
+
+.project-div_div{
+    display: grid;
+    padding: 1rem;
+    margin: 2rem 0;
+    max-width: 300px;
+}
+
+.project-div h2{
+    text-decoration: underline;
+}
+.project1{
+    display: grid;
+    justify-items: center;
+    background-color: var(--color-dark) ;
+    color: #ffffff;
+    margin-right: 6rem;
+    border-radius: 0 50px 50px 0 ;
+    border: 3px solid var(--color-bright);
+    border-left: none;
+}
+.project2{
+    display: grid;
+    justify-items: center;
+    background-color: var(--color-bright) ;
+    color: black;
+    margin: auto 0 auto 6rem;
+    border-radius: 50px 0 0 50px ;
+    border: 3px solid black;
+    border-right: none;
+}
+/* .project-year{
+    display: grid;
+    flex-direction: column;
+    justify-self: end ;
+} */
+
+/* Resume Styles */
+
+.hero {
+    display: flex;
+    justify-content: center;
+}
+.ResumeBanner{
+    display: flex;
+    max-width: 50%;
+    align-self: center;
+}
+
+ul {
+    margin: .3rem 2rem;
+}
+.resume_div_header {
+    display: flex;
+    font-family: 'GlacialIndifference-Bold';
+    padding: 1rem;
+    margin: 1rem;
+    justify-content: center;
+    text-decoration: underline dotted 3px var(--color-bright);
+}
+.resume-subhead {
+    margin: 1.5rem 1rem 1rem;
+}
+
+.resume-div {
+    border-bottom: 2px solid black;
+    margin: 1rem 5rem;
+    word-wrap: break-word;
+}
+.education {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    align-self: center;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    margin: 0 auto;
+}
+.education h2 {
+    grid-column: span 2;
+}
+.education img {
+    margin: 1rem;
+    width: 50%;
+}
+
+.skills-grid{
+    display: grid;
+    justify-items: center;
+    grid-template-areas: 
+         "img img"
+         "img img"
+         "img img"
+         ; 
+}
+.skills-grid div {
+    max-width: fit-content;
+}
+.skills-grid img{
+    max-width: 100% ;
+}
+
+
+.projects {
+    line-height: 1.5rem;
+}
+
+.projects h3 {
+ background-color: var(--color-bright);
+ color: #ffffff;
+ padding: .5rem;
+ text-align: center;
+ margin: 1rem;
+}
+
+.project_wrapper {
+    border: 2px solid black;
+    margin: 1rem;
+}
+.coursework_div {
+    display: grid;
+    grid-template-areas: 
+    "p1 p2 "
+    "p2 p1 "
+    "p1 p2";
+    grid-gap: 15px;
+    margin: 1rem 3rem;
+    justify-content: center;
+}
+
+.coursework_div p {
+    border: 4px solid black;
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+.p1{
+    font-weight: 700;
+    color: #ffffff;
+    background-color: var(--color-dark);
+    text-decoration: underline 0.15em rgba(255, 255, 255, 0);
+    transition: text-decoration-color 300ms;  
+    transition: border 300ms;  
+
+}
+.p2 {
+    font-weight: 700;
+    color: var(--color-dark);
+    background-color: var(--color-bright);
+    text-decoration: underline 0.15em rgba(255, 255, 255, 0);
+    transition: text-decoration-color 300ms; 
+    transition: border 300ms;  
+}
+
+.p1:hover {
+    font-weight: 1000;
+    text-decoration-color:  var(--color-bright);
+    transform-origin: left;
+    border: double 5px var(--color-bright) ;
+}
+.p2:hover {
+    font-weight: 1000;
+    text-decoration-color:  #ffffff;
+    transform-origin: left;
+    border: double 5px var(--color-dark) ;
+}
+
+/* my work page  */
+
+.my-work-hero {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-dark);
+    color: #ffffff;
+    padding: 3rem;
+    line-height: 1.5rem;
+    text-align: center;
+    text-decoration: 2px dashed  var(--color-bright);
+}
+.my-work-container {
+    display: grid;
+    justify-items: center ;
+}
+.my-work-div {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    justify-items: center;
+    justify-content: space-around;
+    border-radius: 20px;
+    margin: 2rem;
+    padding: 1rem;
+    max-width: 500px;
+    font-size: 1rem;
+}
+.my-work-div img {
+    grid-row: 1 / span 2;
+    max-width: 80%;
+}
+.my-work-div div {
+    grid-column: 2;
+    grid-row: span 2;
+}
+
+/* Individual Project Styles */
+.project-page {
+    margin: 1.5rem;
+    line-height: 1.5rem;
+}
+.project-hero{
+    display: flex;
+    font-size: 1.5rem;
+    justify-content: center;
+    padding: 3rem;
+}
+.project-hero h2{
+    font-family: 'GlacialIndifference-Bold';
+}
+
+.project-1{
+    background-color: rgb(233, 75, 75);
+    color: #edeef3;
+}
+.project-2{
+    background-color: rgb(109, 22, 102);
+    color: #edeef3;
+}
+.project-3{
+    background-color: rgb(78, 169, 255);
+    color: #ffffff;
+}
+.project-4{
+    background-color:rgb(128, 185, 199);
+    color: #080808;
+}
+
+
+
+footer {
+    background-color: var(--color-dark);
+    color: #ffffff;
+    padding: 1rem;
+}
+.footer_contact{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-items: center;
+    padding: 1rem;
+}
+
+.footer_contact img {
+     width: 20%;
+ }
+
+
+@media only screen and (min-width: 550px) {
+
+    .nav_header_ul{
+        display: flex;
     }
-    .Openingtext_maller-text{
-        text-align: left;
+
+    .exploresticker{
+        width: 20%;
     }
-  }
+
+    .project-div {
+        display: grid;
+        align-items: center;
+        grid-template-areas: 
+        "project1 project2"
+        "project1 project2"
+        ;
+    }
+    .project-div_div{
+      display: grid;  
+      justify-items: center;
+      margin: 1rem;
+      border-radius: 0%;
+    }
+    .project1 {
+        background-color: var(--color-dark);
+        color: #ffffff;
+        border: 3px solid var(--color-bright);
+    }
+    .project2 {
+
+        background-color: var(--color-bright);
+        color: black;
+        border: 3px solid black;
+    }
+    .project1:hover {
+
+        border: double 5px var(--color-bright) ;
+    }
+    .project2:hover {
+        border: double 5px var(--color-dark) ;
+    }
+   .hero {
+    display: flex;
+    justify-content: start;
+    }
+   .education {
+       width: 80%;
+   }
+   .skills-grid{
+    display: grid;
+    justify-items: center;
+    grid-template-areas: 
+         "img img img"
+         "img img img"; 
+    }   
+
+    .skills-grid img{
+        max-width: 50% ;
+    }
+    /* .resume-div-subdiv {
+        display: flex;
+        justify-content: space-between;
+    } */
+
+   .coursework_div {
+    display: grid;
+    grid-template-areas: 
+    "p p p"
+    "p p p";
+    grid-gap: 15px;
+}
+
+ }
+/* Animations */
+
+/* only to be added to div */
+@keyframes underline{
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
+}
