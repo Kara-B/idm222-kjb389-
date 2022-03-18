@@ -56,6 +56,13 @@ p {
     filter: invert();
 }
 
+.header__logo:hover{
+    /* To get this cool specific filter for the color I wanted on my svg, i input my desired color on https://codepen.io/sosuke/pen/Pjoqqp which generates a filter based on desired color */
+    filter: invert(39%) sepia(71%) saturate(784%) hue-rotate(333deg) brightness(99%) contrast(100%) drop-shadow(0 0.2rem .15rem rgba(0, 0, 0, 0.623));
+   transform-origin: bottom;
+   transition: .2s ease-in-out;
+}
+
 .nav_header_ul{
     display: normal;
 }
@@ -194,13 +201,13 @@ padding: .5rem;
 .project-div {
     display: grid;
     align-items: center;
+    margin-bottom: 1rem;
 }
 
 .project-div_div{
     display: grid;
     padding: 1rem;
     margin: 2rem 0;
-    max-width: 300px;
 }
 
 .project-div h2{
@@ -368,12 +375,14 @@ ul {
     display: grid;
     align-items: center;
     justify-content: center;
+    position: sticky;
+    top: 100px;
     background-color: var(--color-dark);
     color: #ffffff;
     padding: 3rem;
     line-height: 1.5rem;
     text-align: center;
-    text-decoration: 2px dashed  var(--color-bright);
+    border-bottom: 3px solid var(--color-bright);
 }
 .my-work-container {
     display: grid;
@@ -447,7 +456,7 @@ footer {
 }
 
 .footer_contact img {
-     width: 20%;
+     width: 3rem;
  }
 
 
